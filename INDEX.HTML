@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>NEXORAIA — Transformamos negocios con inteligencia artificial</title>
+<meta name="description" content="NEXORAIA transforma negocios con inteligencia artificial. Servicios de marketing digital, ciberseguridad y automatización para impulsar tu crecimiento empresarial.">
+<meta name="keywords" content="inteligencia artificial, marketing digital, ciberseguridad, automatización, NEXORAIA, transformación digital, IA empresarial">
+<meta name="author" content="NEXORAIA">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7c3aed">
+<link rel="canonical" href="https://nexoraia.com">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="NEXORAIA — Transformamos negocios con inteligencia artificial">
+<meta property="og:description" content="Marketing digital, Ciberseguridad y Automatización impulsados por IA. Impulsa tu crecimiento con NEXORAIA.">
+<meta property="og:site_name" content="NEXORAIA">
+<meta property="og:locale" content="es_MX">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NEXORAIA — Transformamos negocios con IA">
+<meta name="twitter:description" content="Marketing digital, Ciberseguridad y Automatización impulsados por IA.">
+<!-- Structured Data -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"NEXORAIA","description":"Transformamos negocios con inteligencia artificial. Marketing digital, ciberseguridad y automatización.","url":"https://nexoraia.com","contactPoint":{"@type":"ContactPoint","telephone":"+52-55-6541-2779","contactType":"sales","areaServed":"MX","availableLanguage":"Spanish"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="image.png" as="image">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#000;--surface:#0f0f0f;--card:#111;
+--border:rgba(255,255,255,0.08);--glow:rgba(255,255,255,0.04);
+--text:#fff;--text-dim:#969696;--text-mid:#ccc;
+--accent:#7c3aed;--accent2:#a855f7;--green:#1b942b;--gold:#ffcc4a;--red:#f24;
+--radius:20px;--font:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);will-change:opacity,transform}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* CHAR DROP ANIMATION */
+@keyframes charDropIn{
+  from{opacity:0;filter:blur(8px);transform:translateY(-18px)}
+  to{opacity:1;filter:blur(0px);transform:translateY(0)}
+}
+.char-anim .char{display:inline-block;opacity:0;animation:charDropIn .45s cubic-bezier(.22,1,.36,1) forwards;will-change:opacity,transform,filter}
+.char-anim .char-space{display:inline-block;width:.3em}
+.hero h1 strong .char{background:linear-gradient(135deg,#fff,var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-title strong .char{background:linear-gradient(135deg,#fff,var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-title strong{font-weight:700}
+.cta-content h2 strong .char{background:linear-gradient(135deg,#fff,var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 30px;transition:background .3s,backdrop-filter .3s}
+nav.scrolled{background:rgba(0,0,0,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:700;letter-spacing:-.02em;background:linear-gradient(135deg,#fff,var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;align-items:center;gap:35px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text-dim);transition:color .3s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:#fff;color:#000;padding:10px 24px;border-radius:100px;font-weight:600;font-size:14px;transition:transform .3s,box-shadow .3s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(168,85,247,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;transition:transform .3s}
+@media(max-width:768px){
+.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:rgba(0,0,0,.95);backdrop-filter:blur(20px);flex-direction:column;padding:40px;gap:25px;border-bottom:1px solid var(--border)}
+.nav-links.open{display:flex}
+.hamburger{display:flex}
+}
+
+/* HERO IMAGE BG */
+.hero-bg-wrap{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:0;pointer-events:none;transition:opacity .4s;will-change:opacity;transform:translateZ(0)}
+.hero-bg-wrap img{width:100%;height:100%;object-fit:cover;transform:translateZ(0)}
+.hero-bg-wrap .bg-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.85) 100%);pointer-events:none}
+
+/* PURPLE PARTICLES CANVAS */
+.particle-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:all}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:160px 30px 120px;position:relative;overflow:hidden;z-index:1}
+.hero-content{max-width:800px;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:6px 20px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,.03);font-size:14px;color:var(--text-dim);margin-bottom:30px;animation:fadeIn 1s .2s both}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite}
+.hero h1{font-size:clamp(36px,6vw,72px);font-weight:400;letter-spacing:-.05em;line-height:1.1;margin-bottom:24px;animation:fadeUp 1s .4s both}
+.hero h1 strong{font-weight:700}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--text-dim);margin-bottom:16px;animation:fadeUp 1s .6s both;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-tags{font-size:15px;color:var(--text-mid);margin-bottom:40px;animation:fadeUp 1s .7s both;letter-spacing:.02em}
+.hero-tags span{color:var(--accent2)}
+.hero-cta{animation:fadeUp 1s .8s both}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#000;padding:16px 36px;border-radius:100px;font-weight:600;font-size:16px;transition:transform .3s,box-shadow .3s;border:none;cursor:pointer}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(168,85,247,.25)}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;padding:16px 36px;border-radius:100px;font-weight:600;font-size:16px;border:1px solid var(--border);transition:all .3s;cursor:pointer}
+.btn-outline:hover{border-color:var(--accent2);background:rgba(168,85,247,.05)}
+
+/* SECTIONS */
+section{padding:120px 30px;position:relative}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--accent2);margin-bottom:16px}
+.section-label .dot{width:6px;height:6px;border-radius:50%;background:var(--accent2)}
+.section-title{font-size:clamp(30px,4vw,56px);font-weight:400;letter-spacing:-.04em;line-height:1.2;margin-bottom:20px}
+.section-title strong{font-weight:700}
+.section-desc{font-size:17px;color:var(--text-dim);max-width:600px;line-height:1.7}
+.section-header{text-align:center;margin-bottom:80px}
+.section-header .section-desc{margin:0 auto}
+
+/* SERVICES (CARDS) */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;box-shadow:inset 0 1px 20px rgba(255,255,255,.02);transition:transform .4s,border-color .4s,box-shadow .4s,background .4s;position:relative;overflow:hidden;cursor:pointer}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transition:background .4s}
+.service-card:nth-child(1):hover{background:linear-gradient(135deg,rgba(138,43,226,.12),rgba(75,0,130,.08));border-color:rgba(138,43,226,.35)}
+.service-card:nth-child(2):hover{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(124,58,237,.08));border-color:rgba(168,85,247,.35)}
+.service-card:nth-child(3):hover{background:linear-gradient(135deg,rgba(255,204,74,.1),rgba(255,165,0,.06));border-color:rgba(255,204,74,.35)}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.service-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(168,85,247,.1));display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px}
+.service-card h3{font-size:22px;font-weight:600;margin-bottom:12px;letter-spacing:-.02em}
+.service-card p{color:var(--text-dim);font-size:15px;line-height:1.7}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr}}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+.pricing-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;position:relative;overflow:hidden;transition:transform .4s,border-color .4s,background .5s,box-shadow .5s;display:flex;flex-direction:column;box-shadow:inset 0 1px 20px rgba(255,255,255,.02);cursor:pointer}
+.pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent)}
+.pricing-card:nth-child(1):hover{background:linear-gradient(135deg,rgba(168,85,247,.08),rgba(124,58,237,.05));border-color:rgba(168,85,247,.25)}
+.pricing-card:nth-child(2):hover{background:linear-gradient(135deg,rgba(236,72,153,.08),rgba(219,39,119,.05));border-color:rgba(236,72,153,.25)}
+.pricing-card:nth-child(3):hover{background:linear-gradient(135deg,rgba(139,92,246,.1),rgba(109,40,217,.06));border-color:rgba(139,92,246,.3)}
+.pricing-card:nth-child(4):hover{background:linear-gradient(135deg,rgba(255,204,74,.08),rgba(245,158,11,.05));border-color:rgba(255,204,74,.25)}
+.pricing-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.pricing-card.featured{border-color:rgba(168,85,247,.3);box-shadow:inset 0 1px 30px rgba(168,85,247,.06)}
+.pricing-badge{position:absolute;top:20px;right:20px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;text-transform:uppercase;letter-spacing:.05em}
+.pricing-offer{display:inline-block;background:rgba(27,148,43,.15);color:var(--green);font-size:12px;font-weight:600;padding:3px 12px;border-radius:100px;margin-bottom:16px}
+.pricing-name{font-size:24px;font-weight:600;margin-bottom:8px;letter-spacing:-.02em}
+.pricing-prices{margin-bottom:8px;display:flex;align-items:baseline;gap:10px}
+.pricing-price{font-size:36px;font-weight:700;letter-spacing:-.03em}
+.pricing-original{font-size:16px;color:var(--text-dim);text-decoration:line-through}
+.pricing-desc{color:var(--text-dim);font-size:14px;margin-bottom:28px}
+.pricing-features{list-style:none;margin-bottom:32px;flex:1}
+.pricing-features li{display:flex;align-items:flex-start;gap:12px;padding:8px 0;font-size:14px;color:var(--text-mid)}
+.pricing-features li::before{content:'✓';color:var(--accent2);font-weight:700;flex-shrink:0;margin-top:1px}
+.pricing-btn{display:block;text-align:center;padding:14px;border-radius:12px;font-weight:600;font-size:15px;transition:all .3s;border:1px solid var(--border);color:#fff;background:transparent}
+.pricing-btn:hover{background:rgba(255,255,255,.05);border-color:var(--accent2)}
+.pricing-card.featured .pricing-btn{background:#fff;color:#000;border-color:#fff}
+.pricing-card.featured .pricing-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(168,85,247,.2)}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;box-shadow:inset 0 1px 20px rgba(255,255,255,.02);position:relative;overflow:hidden}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent)}
+.about-card h3{font-size:20px;font-weight:600;margin-bottom:16px;color:var(--accent2)}
+.about-card p{color:var(--text-dim);font-size:15px;line-height:1.8}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+
+/* CTA */
+.cta-section{text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(124,58,237,.12) 0%,transparent 70%);pointer-events:none}
+.cta-content{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.cta-content h2{font-size:clamp(28px,4vw,48px);font-weight:400;letter-spacing:-.04em;line-height:1.2;margin-bottom:20px}
+.cta-content h2 strong{font-weight:700}
+.cta-content p{color:var(--text-dim);font-size:17px;margin-bottom:40px;line-height:1.7}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:40px 30px;text-align:center}
+footer p{color:var(--text-dim);font-size:14px}
+
+/* SEPARATOR */
+.sep{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 auto}
+
+/* FORM MODAL */
+.form-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);z-index:200;display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.form-overlay.active{display:flex;opacity:1}
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:48px;max-width:520px;width:90%;position:relative;box-shadow:0 40px 80px rgba(0,0,0,.6),inset 0 1px 30px rgba(255,255,255,.03);animation:fadeUp .4s both}
+.form-card h3{font-size:24px;font-weight:700;margin-bottom:6px}
+.form-card .form-sub{font-size:14px;color:var(--text-dim);margin-bottom:28px}
+.form-card label{display:block;font-size:13px;font-weight:500;color:var(--text-mid);margin-bottom:6px}
+.form-card input,.form-card select,.form-card textarea{width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:#fff;font-family:var(--font);font-size:14px;margin-bottom:18px;transition:border-color .3s;outline:none}
+.form-card input:focus,.form-card select:focus,.form-card textarea:focus{border-color:var(--accent2)}
+.form-card select option{background:#111;color:#fff}
+.form-card textarea{resize:vertical;min-height:80px}
+.form-close{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--text-dim);font-size:24px;cursor:pointer;transition:color .3s}
+.form-close:hover{color:#fff}
+.form-submit{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;font-weight:600;font-size:16px;cursor:pointer;transition:transform .3s,box-shadow .3s;display:flex;align-items:center;justify-content:center;gap:10px}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.3)}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+  /* Hero */
+  .hero{padding:120px 20px 80px;min-height:90vh}
+  .hero h1{font-size:clamp(28px,8vw,42px);letter-spacing:-.03em;line-height:1.15}
+  .hero-badge{font-size:12px;padding:5px 14px}
+  .hero-sub{font-size:15px}
+  .hero-tags{font-size:13px;margin-bottom:30px}
+  .btn-primary{padding:14px 28px;font-size:15px}
+  .btn-outline{padding:14px 28px;font-size:15px}
+  /* Sections */
+  section{padding:80px 20px}
+  .section-header{margin-bottom:50px}
+  .section-title{font-size:clamp(24px,6vw,36px)}
+  .section-desc{font-size:15px}
+  .section-label{font-size:11px}
+  /* Services */
+  .services-grid{grid-template-columns:1fr;gap:20px}
+  .service-card{padding:30px}
+  .service-card h3{font-size:19px}
+  .service-card p{font-size:14px}
+  .service-icon{width:50px;height:50px;font-size:24px;border-radius:12px}
+  /* Pricing */
+  .pricing-grid{grid-template-columns:1fr;gap:20px}
+  .pricing-card{padding:30px}
+  .pricing-name{font-size:20px}
+  .pricing-price{font-size:30px}
+  .pricing-original{font-size:14px}
+  .pricing-desc{font-size:13px}
+  .pricing-features li{font-size:13px;padding:6px 0}
+  .pricing-btn{padding:12px;font-size:14px}
+  .pricing-badge{font-size:10px;padding:3px 10px;top:14px;right:14px}
+  /* About */
+  .about-grid{grid-template-columns:1fr;gap:20px}
+  .about-card{padding:30px}
+  .about-card h3{font-size:18px}
+  .about-card p{font-size:14px;line-height:1.7}
+  /* CTA */
+  .cta-content h2{font-size:clamp(22px,6vw,34px)}
+  .cta-content p{font-size:15px;margin-bottom:30px}
+  /* Form */
+  .form-card{padding:30px 24px;max-width:95%}
+  .form-card h3{font-size:20px}
+  .form-card input,.form-card select,.form-card textarea{padding:10px 14px;font-size:14px;margin-bottom:14px}
+  .form-card label{font-size:12px}
+  .form-submit{padding:12px;font-size:15px}
+  /* Footer */
+  footer{padding:30px 20px}
+  footer p{font-size:12px}
+  /* Hero BG mobile */
+  .hero-bg-wrap .bg-overlay{background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.9) 100%)}
+  /* Particles — fewer on mobile for performance */
+  .particle-canvas{pointer-events:none}
+  /* Nav */
+  nav{padding:14px 20px}
+  .logo{font-size:19px}
+}
+@media(max-width:480px){
+  .hero{padding:100px 16px 60px}
+  .hero h1{font-size:clamp(24px,8vw,34px)}
+  .hero-badge{font-size:11px;padding:4px 12px;gap:6px}
+  section{padding:60px 16px}
+  .section-header{margin-bottom:40px}
+  .service-card{padding:24px}
+  .pricing-card{padding:24px}
+  .about-card{padding:24px}
+  .form-card{padding:24px 18px}
+  .btn-primary{padding:12px 24px;font-size:14px}
+}
+
+/* CLIENTS CAROUSEL */
+.clients-section {
+  position: relative;
+  background: #050505;
+  overflow: hidden;
+  padding: 120px 0;
+}
+.clients-container {
+  display: flex;
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+}
+.clients-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollInfinite 40s linear infinite;
+  width: max-content;
+}
+.clients-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scrollInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 15px)); }
+}
+.client-card {
+  width: 480px;
+  height: 270px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s;
+  cursor: pointer;
+  background: #000;
+}
+.client-card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 20px rgba(124,58,237,0.3);
+  border-color: var(--accent2);
+}
+.client-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.4s, transform 0.6s;
+}
+.client-card:hover video {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.client-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s;
+}
+.client-card:hover .client-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+.client-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #fff;
+}
+.client-info p {
+  font-size: 14px;
+  color: var(--accent2);
+}
+@media(max-width: 768px) {
+  .client-card { width: 320px; height: 180px; }
+  .clients-section { padding: 80px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+<div class="nav-inner">
+  <a href="#" class="logo">NEXORAIA</a>
+  <div class="hamburger" id="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="https://oriole-falcon-3anp.squarespace.com/services-store">Servicios</a>
+    <a href="https://oriole-falcon-3anp.squarespace.com/about">Acerca de</a>
+    <a href="https://oriole-falcon-3anp.squarespace.com/contact">Contacto</a>
+    <a href="https://oriole-falcon-3anp.squarespace.com/appointments" class="nav-cta">Reservar</a>
+  </div>
+</div>
+</nav>
+
+<!-- HERO IMAGE BG -->
+<div class="hero-bg-wrap" id="heroBg">
+  <img src="image.png" alt="NEXORAIA Hero Background" fetchpriority="high">
+  <div class="bg-overlay"></div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<canvas class="particle-canvas" id="heroParticles"></canvas>
+<div class="hero-content">
+  <div class="hero-badge"><span class="dot"></span>Marketing digital · Ciberseguridad · Automatización</div>
+  <h1 data-char-anim>Transformamos negocios con <strong>inteligencia artificial</strong></h1>
+  <p class="hero-sub">Impulsa tu crecimiento.</p>
+  <p class="hero-tags"><span>Marketing digital</span> | <span>Ciberseguridad</span> | <span>Automatización</span></p>
+  <div class="hero-cta">
+    <a href="#precios" class="btn-primary">Descubrir →</a>
+  </div>
+</div>
+</section>
+
+<div class="sep"></div>
+
+<!-- SERVICES -->
+<section id="servicios">
+<div class="section-inner">
+  <div class="section-header reveal">
+    <div class="section-label"><span class="dot"></span>Lo que hacemos</div>
+    <h2 class="section-title" data-char-anim><strong>Servicios</strong> que rompen el molde</h2>
+    <p class="section-desc">Combinamos IA, ciberseguridad y automatización para llevar tu negocio al siguiente nivel.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-icon">🚀</div>
+      <h3>Marketing Digital</h3>
+      <p>Estrategias de contenido y campañas impulsadas por inteligencia artificial para maximizar tu alcance y conversiones.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-icon">🛡️</div>
+      <h3>Ciberseguridad</h3>
+      <p>Protección avanzada para tus activos digitales. Auditorías, monitoreo y respuesta ante amenazas en tiempo real.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-icon">⚡</div>
+      <h3>Automatización</h3>
+      <p>Optimiza tus procesos con flujos de trabajo inteligentes. Reduce costos y aumenta la productividad de tu equipo.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="sep"></div>
+
+<!-- CLIENTS -->
+<section class="clients-section" id="clientes">
+  <canvas class="particle-canvas" id="clientsParticles"></canvas>
+  <div class="section-inner" style="position:relative; z-index:2; pointer-events:none;">
+    <div class="section-header reveal">
+      <div class="section-label"><span class="dot"></span>Nuestros Clientes</div>
+      <h2 class="section-title" data-char-anim>Confían en <strong>Nexoraia</strong></h2>
+      <p class="section-desc">Empresas que ya están transformando su futuro con nuestras soluciones de IA.</p>
+    </div>
+  </div>
+  <div class="clients-container">
+    <div class="clients-track" id="clientsTrack">
+      <div class="client-card">
+        <video src="kira.mp4" loop muted playsinline loading="lazy"></video>
+        <div class="client-info">
+          <h4>Kira</h4>
+          <p>Innovación Digital</p>
+        </div>
+      </div>
+      <div class="client-card">
+        <video src="kimo.mp4" loop muted playsinline loading="lazy"></video>
+        <div class="client-info">
+          <h4>Kimo</h4>
+          <p>Soluciones IA</p>
+        </div>
+      </div>
+      <div class="client-card">
+        <video src="momento.mp4" loop muted playsinline loading="lazy"></video>
+        <div class="client-info">
+          <h4>Momento</h4>
+          <p>Creatividad Estratégica</p>
+        </div>
+      </div>
+      <div class="client-card">
+        <video src="odontologa.mp4" loop muted playsinline loading="lazy"></video>
+        <div class="client-info">
+          <h4>Dental Care</h4>
+          <p>Salud Inteligente</p>
+        </div>
+      </div>
+      <div class="client-card">
+        <video src="sonrimex.mp4" loop muted playsinline loading="lazy"></video>
+        <div class="client-info">
+          <h4>Sonrimex</h4>
+          <p>Automatización</p>
+        </div>
+      </div>
+      <div class="client-card">
+        <video src="tpoldos.mp4" loop muted playsinline loading="lazy"></video>
+        <div class="client-info">
+          <h4>Tpoldos</h4>
+          <p>Marketing Digital</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- PRICING -->
+<section id="precios">
+<div class="section-inner">
+  <div class="section-header reveal">
+    <div class="section-label"><span class="dot"></span>Paquetes</div>
+    <h2 class="section-title" data-char-anim>Nuestros <strong>Paquetes</strong></h2>
+    <p class="section-desc">Elige el plan que mejor se adapte a tu negocio y comienza a transformar tu presencia digital.</p>
+  </div>
+  <div class="pricing-grid">
+    <!-- Basico -->
+    <div class="pricing-card reveal reveal-delay-1">
+      <span class="pricing-offer">Oferta</span>
+      <h3 class="pricing-name">Básico Digital</h3>
+      <div class="pricing-prices">
+        <span class="pricing-price">$7,500</span>
+        <span class="pricing-original">$8,500</span>
+      </div>
+      <p class="pricing-desc">Presencia mínima y profesional</p>
+      <ul class="pricing-features">
+        <li>Copywriting estratégico para el negocio</li>
+        <li>Imágenes con IA para marca (5-10 piezas)</li>
+        <li>Estructura comercial básica</li>
+      </ul>
+      <a href="#" class="pricing-btn" data-service="Básico Digital">Agendar llamada</a>
+    </div>
+    <!-- Social Media IA -->
+    <div class="pricing-card reveal reveal-delay-2">
+      <span class="pricing-offer">Oferta</span>
+      <h3 class="pricing-name">Social Media IA</h3>
+      <div class="pricing-prices">
+        <span class="pricing-price">$14,000</span>
+        <span class="pricing-original">$18,000</span>
+      </div>
+      <p class="pricing-desc">Contenido constante para redes</p>
+      <ul class="pricing-features">
+        <li>Calendario estratégico y posts listos</li>
+        <li>Reels generados con IA</li>
+        <li>Imágenes personalizadas y consistentes</li>
+      </ul>
+      <a href="#" class="pricing-btn" data-service="Social Media IA">Agendar llamada</a>
+    </div>
+    <!-- Transformacion -->
+    <div class="pricing-card featured reveal reveal-delay-3">
+      <span class="pricing-badge">Recomendado</span>
+      <span class="pricing-offer">Oferta</span>
+      <h3 class="pricing-name">Transformación</h3>
+      <div class="pricing-prices">
+        <span class="pricing-price">$20,000</span>
+        <span class="pricing-original">$25,000</span>
+      </div>
+      <p class="pricing-desc">El sistema completo del PDF</p>
+      <ul class="pricing-features">
+        <li>Pack completo de Imágenes y Video con IA</li>
+        <li>Copywriting para conversión y redes</li>
+        <li>Estructura comercial digital completa</li>
+      </ul>
+      <a href="#" class="pricing-btn" data-service="Transformación">Agendar llamada</a>
+    </div>
+    <!-- Elite Pro -->
+    <div class="pricing-card reveal reveal-delay-4">
+      <span class="pricing-offer">Oferta</span>
+      <h3 class="pricing-name">Elite Pro</h3>
+      <div class="pricing-prices">
+        <span class="pricing-price">$32,000</span>
+        <span class="pricing-original">$38,000</span>
+      </div>
+      <p class="pricing-desc">Crecimiento y escalabilidad total</p>
+      <ul class="pricing-features">
+        <li>Todo lo del nivel anterior +</li>
+        <li>Creación de Fichas de Servicios y Casos de Éxito</li>
+        <li>Página web con estructura estratégica y SEO</li>
+      </ul>
+      <a href="#" class="pricing-btn" data-service="Elite Pro">Agendar llamada</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ABOUT -->
+<section id="nosotros">
+<div class="section-inner">
+  <div class="section-header reveal">
+    <div class="section-label"><span class="dot"></span>Nosotros</div>
+    <h2 class="section-title" data-char-anim>¿Quiénes <strong>somos</strong>?</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-card reveal reveal-delay-1">
+      <h3>🔭 Visión</h3>
+      <p>Ser líderes globales en ofrecer soluciones integrales a empresas que busquen innovar y transformar sus operaciones mediante tecnología avanzada. Queremos ser el aliado estratégico que lleva a las empresas a dominar el mercado digital, optimizando sus recursos y garantizando su crecimiento sostenido.</p>
+    </div>
+    <div class="about-card reveal reveal-delay-2">
+      <h3>🎯 Misión</h3>
+      <p>Nos especializamos en transformar empresas a través de soluciones tecnológicas avanzadas y estrategias de marketing digital. Combinamos inteligencia artificial, ciberseguridad, automatización de procesos y creación de contenido visual para llevar los negocios a su máximo potencial, mejorando su presencia digital, seguridad y productividad.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="sep"></div>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+<canvas class="particle-canvas" id="ctaParticles"></canvas>
+<div class="cta-content reveal">
+  <div class="section-label" style="justify-content:center"><span class="dot"></span>Hablemos</div>
+  <h2 data-char-anim><strong>Agenda tu llamada</strong> relámpago</h2>
+  <p>En 20 minutos resolveremos dudas, trazaremos un plan y tal vez salvemos al mundo del aburrimiento visual.</p>
+  <a href="#" class="btn-primary" onclick="openForm();return false">Reservar ahora →</a>
+</div>
+</section>
+
+<!-- FORM MODAL -->
+<div class="form-overlay" id="formOverlay" onclick="if(event.target===this)closeForm()">
+<div class="form-card">
+  <button class="form-close" onclick="closeForm()">✕</button>
+  <h3>Agenda tu llamada</h3>
+  <p class="form-sub">Completa tus datos y te contactamos vía WhatsApp</p>
+  <form id="contactForm" onsubmit="sendWhatsApp(event)">
+    <label for="fname">Tu nombre</label>
+    <input type="text" id="fname" placeholder="Ej. Juan García" required>
+    <label for="fcompany">Nombre de tu empresa</label>
+    <input type="text" id="fcompany" placeholder="Ej. Mi Empresa SA">
+    <label for="fsize">Tamaño de la empresa</label>
+    <select id="fsize">
+      <option value="1-10">1 - 10 empleados</option>
+      <option value="11-50">11 - 50 empleados</option>
+      <option value="51-200">51 - 200 empleados</option>
+      <option value="200+">200+ empleados</option>
+    </select>
+    <label for="fservice">Servicio de interés</label>
+    <input type="text" id="fservice" placeholder="Ej. Marketing Digital" readonly>
+    <label for="fneed">¿Qué necesitas?</label>
+    <textarea id="fneed" placeholder="Cuéntanos brevemente tu proyecto o necesidad..."></textarea>
+    <button type="submit" class="form-submit">📲 Enviar por WhatsApp</button>
+  </form>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2025 NEXORAIA. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+// === CHAR DROP ANIMATION ===
+function splitChars(el){
+  const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null);
+  const textNodes=[];
+  while(walker.nextNode()) textNodes.push(walker.currentNode);
+  let charIndex=0;
+  textNodes.forEach(node=>{
+    const frag=document.createDocumentFragment();
+    node.textContent.split('').forEach(ch=>{
+      if(ch===' '){
+        const sp=document.createElement('span');
+        sp.className='char-space';sp.innerHTML='&nbsp;';
+        frag.appendChild(sp);
+      } else {
+        const span=document.createElement('span');
+        span.className='char';span.textContent=ch;
+        span.style.animationDelay=(charIndex*0.03)+'s';
+        frag.appendChild(span);
+      }
+      charIndex++;
+    });
+    node.parentNode.replaceChild(frag,node);
+  });
+}
+document.querySelectorAll('[data-char-anim]').forEach(el=>splitChars(el));
+const charObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('char-anim');charObs.unobserve(e.target)}});
+},{threshold:.2});
+document.querySelectorAll('[data-char-anim]').forEach(el=>charObs.observe(el));
+
+// === SCROLL REVEAL ===
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// === NAV SCROLL ===
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+}, {passive: true});
+
+// === SCROLL-DRIVEN HERO BG FADE ===
+(function(){
+  const wrap=document.getElementById('heroBg');
+  const svc=document.getElementById('servicios');
+  if(!wrap||!svc) return;
+  window.addEventListener('scroll',()=>{
+    requestAnimationFrame(()=>{
+      const svcTop=svc.offsetTop;
+      const scrollY=window.scrollY;
+      // Fade out approaching services
+      const fadeStart=svcTop-window.innerHeight*0.5;
+      const fadeEnd=svcTop;
+      if(scrollY>fadeStart){
+        const fadeP=Math.min((scrollY-fadeStart)/(fadeEnd-fadeStart),1);
+        wrap.style.opacity=1-fadeP;
+      } else {
+        wrap.style.opacity=1;
+      }
+    });
+  }, {passive: true});
+})();
+
+// === INTERACTIVE PURPLE PARTICLES ===
+function initParticles(canvasId){
+  const canvas=document.getElementById(canvasId);
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  let w,h,particles=[],mouse={x:-999,y:-999};
+  let isVisible=true;
+  if(window.IntersectionObserver){
+    const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{isVisible=e.isIntersecting;});},{threshold:0});
+    obs.observe(canvas);
+  }
+  function resize(){
+    const rect=canvas.parentElement.getBoundingClientRect();
+    w=canvas.width=rect.width;
+    h=canvas.height=rect.height;
+  }
+  resize();
+  window.addEventListener('resize',resize, {passive: true});
+  // Track mouse relative to canvas
+  canvas.addEventListener('mousemove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    mouse.x=e.clientX-rect.left;
+    mouse.y=e.clientY-rect.top;
+  }, {passive: true});
+  canvas.addEventListener('mouseleave',()=>{mouse.x=-999;mouse.y=-999});
+  // Create particles (reduced for performance)
+  const isMobile=window.innerWidth<768;
+  const count=isMobile?15:35;
+  for(let i=0;i<count;i++){
+    particles.push({
+      x:Math.random()*w,y:Math.random()*h,
+      vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,
+      r:Math.random()*2+1,
+      baseAlpha:.15+Math.random()*.25,
+      hue:260+Math.random()*40 // purple range
+    });
+  }
+  function draw(){
+    if(!isVisible){
+      requestAnimationFrame(draw);
+      return;
+    }
+    ctx.clearRect(0,0,w,h);
+    particles.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=w;if(p.x>w)p.x=0;
+      if(p.y<0)p.y=h;if(p.y>h)p.y=0;
+      // Mouse interaction — attract & glow
+      const dx=mouse.x-p.x,dy=mouse.y-p.y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      let alpha=p.baseAlpha,radius=p.r;
+      if(dist<150){
+        const force=(150-dist)/150;
+        p.vx+=dx*force*0.003;
+        p.vy+=dy*force*0.003;
+        alpha=p.baseAlpha+force*.6;
+        radius=p.r+force*3;
+      }
+      // Dampen velocity
+      p.vx*=.99;p.vy*=.99;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,radius,0,Math.PI*2);
+      ctx.fillStyle=`hsla(${p.hue},70%,60%,${alpha})`;
+      ctx.fill();
+      // Glow
+      if(dist<150){
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,radius*3,0,Math.PI*2);
+        ctx.fillStyle=`hsla(${p.hue},70%,60%,${alpha*.15})`;
+        ctx.fill();
+      }
+    });
+    // Draw connections
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const dx=particles[i].x-particles[j].x;
+        const dy=particles[i].y-particles[j].y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<120){
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x,particles[i].y);
+          ctx.lineTo(particles[j].x,particles[j].y);
+          ctx.strokeStyle=`hsla(270,60%,60%,${.08*(1-dist/120)})`;
+          ctx.lineWidth=.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+initParticles('heroParticles');
+initParticles('ctaParticles');
+
+// === FORM MODAL + WHATSAPP ===
+function openForm(service){
+  const overlay=document.getElementById('formOverlay');
+  overlay.classList.add('active');
+  if(service) document.getElementById('fservice').value=service;
+  document.body.style.overflow='hidden';
+}
+function closeForm(){
+  document.getElementById('formOverlay').classList.remove('active');
+  document.body.style.overflow='';
+}
+// Pricing buttons open form with service pre-filled
+document.querySelectorAll('.pricing-btn').forEach(btn=>{
+  btn.addEventListener('click',e=>{
+    e.preventDefault();
+    openForm(btn.dataset.service);
+  });
+});
+function sendWhatsApp(e){
+  e.preventDefault();
+  const name=document.getElementById('fname').value;
+  const company=document.getElementById('fcompany').value;
+  const size=document.getElementById('fsize').value;
+  const service=document.getElementById('fservice').value;
+  const need=document.getElementById('fneed').value;
+  const msg=`¡Hola NEXORAIA! 👋%0A%0A*Nombre:* ${encodeURIComponent(name)}%0A*Empresa:* ${encodeURIComponent(company)}%0A*Tamaño:* ${encodeURIComponent(size)}%0A*Servicio:* ${encodeURIComponent(service)}%0A*Necesidad:* ${encodeURIComponent(need)}`;
+  window.open(`https://wa.me/5215565412779?text=${msg}`,'_blank');
+  closeForm();
+}
+
+// === CLIENTS CAROUSEL INTERACTION ===
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('clientsTrack');
+  if (track) {
+    // Duplicate items for infinite scroll
+    const items = [...track.children];
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      track.appendChild(clone);
+    });
+
+    // Intersection Observer to play/pause videos when visible
+    const videoObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('video');
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    track.querySelectorAll('.client-card').forEach(card => videoObs.observe(card));
+  }
+});
+initParticles('clientsParticles');
+</script>
+</body>
+</html>
